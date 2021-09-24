@@ -10117,6 +10117,10 @@ header h1 {
   color: #ccc;
 }
 
+a {
+  color: inherit;
+}
+
 .media {
   background: #f0f4f7;
   padding: 10px;
