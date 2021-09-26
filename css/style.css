@@ -10088,8 +10088,9 @@ header h1 {
   width: 200px;
   display: block;
   margin: auto;
-  border-radius: 200px;
+  border-radius: 50%;
   margin-top: -70px;
+  filter: drop-shadow(3px 3px 5px gray);
 }
 
 .line {
@@ -10126,7 +10127,7 @@ a {
   margin-right: 10px;
   margin-top: 3px;
   font-style: italic;
-  width: 120px;
+  width: 100px;
 }
 
 .media-img {
@@ -10134,6 +10135,7 @@ a {
   max-height: 100%;
   object-fit: contain;
   overflow: hidden;
+  filter: grayscale(90%);
 }
 
 .media {
