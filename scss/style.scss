@@ -48,9 +48,7 @@ header h1{
 .row{
     margin-bottom: 20px;
 }
-.img{ 
-    //filter: brightness(20%);
-}
+
 .profile-img{
     width: 200px;
     display: block;
@@ -75,6 +73,10 @@ header h1{
     list-style: none;
     //font-weight: bold;
     line-height: 2.5em;
+}
+.work-list li{
+    list-style: none;
+    font-weight: 600;
 }
 
 .contact-list span{
