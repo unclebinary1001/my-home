@@ -1,10 +1,10 @@
-import { Flex, WrapItem, Text, Spacer } from "@chakra-ui/react";
+import { Flex, WrapItem, Text, Spacer, Link } from "@chakra-ui/react";
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <Flex alignItems={"center"} py={4} mb={4}>
+    <Flex alignItems={"center"} py={4} mb={16}>
       <WrapItem>
         <Avatar
           color={"#e7ecef"}
@@ -20,6 +20,10 @@ export default function Navbar({}: Props) {
       <Text>Media</Text>
       <Spacer />
       <Text>Contact</Text>
+      <Spacer />
+      <Link href="/resume.pdf">
+        Resume
+    </Link>
     </Flex>
   );
 }
