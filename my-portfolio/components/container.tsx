@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
     return (
-        <Box maxW="1200px" mx="auto" px={4}>
+        <Box maxW="1200px" mx="auto" px={8}>
             <Navbar />
             <Header />
             {children}
