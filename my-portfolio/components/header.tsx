@@ -9,10 +9,10 @@ export const Header = () => {
       <Heading size="3xl" color={"#274c77"} mb={4}>
         Mahlangu Nzunda.
       </Heading>
-      <Heading mb={8} color={"#274c77"} size="3xl">
+      <Heading mb={8} color={"#274c77"} size="3xl" lineHeight={1.2}>
         Software Engineer | EdTech Enthusiast
       </Heading>
-      <Text mb={8} fontSize={"lg"}>
+      <Text mb={8} fontSize={"lg"} maxW={600} align={"left"}>
         Computer Engineering student with a passion for software development and
         a strong desire to learn and grow in the tech industry.
       </Text>
