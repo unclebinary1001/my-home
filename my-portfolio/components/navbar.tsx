@@ -7,13 +7,15 @@ export default function Navbar({}: Props) {
     <Flex alignItems={"center"} py={4} mb={16}>
       <WrapItem>
         <Avatar
-          color={"#e7ecef"}
-          backgroundColor={"#274c77"}
+          color={"#ffffff"}
+          backgroundColor={"#2F6475"}
           name="Mahlangu Nzunda"
         />
       </WrapItem>
       <Spacer />
+      <Link href="#about">
       <Text>About</Text>
+      </Link>
       <Spacer />
       <Text>Projects</Text>
       <Spacer />
