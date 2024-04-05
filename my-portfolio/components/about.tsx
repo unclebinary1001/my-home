@@ -9,6 +9,8 @@ import {
   Stack,
   Text,
   Link,
+  HStack,
+  Center,
 } from "@chakra-ui/react";
 import { MdEmail, MdPhone } from "react-icons/md";
 
@@ -33,7 +35,9 @@ const TechStackList = () => {
   return (
     <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
       {TechStack.map((tech) => (
-        <Text color={'#2d3748'} fontWeight={"bold"} id={tech}>{tech}</Text>
+        <Text color={"#2d3748"} fontWeight={"bold"} id={tech}>
+          {tech}
+        </Text>
       ))}
     </Stack>
   );
@@ -42,15 +46,27 @@ const TechStackList = () => {
 export const About = () => {
   return (
     <Box id="about">
-      <Box maxW={"32 rem"} mb={8}>
-      <Heading size="lg" color={"#2f374e"} mb={4}>
-        About Me.
-      </Heading>
-      <hr/>
+      <Box mb={4}>
+        <HStack align={"center"}>
+          <Heading fontSize={"2xl"} color={"#2F6475"}>
+            01.
+          </Heading>
+          <Heading size="lg" color={"#2f374e"}>
+            About Me
+          </Heading>
+        </HStack>
+
+        <hr />
       </Box>
- 
+
       <Flex align={"center"} justify={"space-between"}>
-        <VStack width={"50%"} color={"#2F6475"} fontSize={"md"} spacing={5} align={"justfiy"}>
+        <VStack
+          width={"60%"}
+          color={"#2F6475"}
+          fontSize={"md"}
+          spacing={5}
+          align={"justify"}
+        >
           <Text>
             Hi, my name is Mahlangu Nzunda. I'm a Software Engineer and EdTech
             enthusiast.
@@ -61,10 +77,10 @@ export const About = () => {
             development.
           </Text>
           <Text>
-            I am currently the Cofounder of the Giants Education
-            Network where we publish revision material for high school students
-            in Zambia. I also give back to the community by volunteering back at the
-            Heart of Love Foundation and maintaining their website.
+            I am currently the Cofounder of the Giants Education Network where
+            we publish revision material for high school students in Zambia. I
+            also give back to the community by volunteering back at the Heart of
+            Love Foundation and maintaining their website.
           </Text>
           <Text>
             This combination of experience has allowed me to understand and
@@ -75,8 +91,8 @@ export const About = () => {
         </VStack>
 
         <Image
-          borderRadius="full"
-          boxSize="300px"
+          borderRadius="20px"
+          boxSize="400px"
           src="/headshot.jpg"
           alt="Mahlangu nzunda"
         />
