@@ -4,7 +4,7 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <Flex alignItems={"center"} py={4} mb={16}>
+    <Flex as={"header"} alignItems={"center"} py={4} mb={16}>
       <WrapItem>
         <Avatar
           color={"#ffffff"}
@@ -14,7 +14,7 @@ export default function Navbar({}: Props) {
       </WrapItem>
       <Spacer />
       <Link href="#about">
-      <Text>About</Text>
+        <Text>About</Text>
       </Link>
       <Spacer />
       <Text>Projects</Text>
@@ -23,9 +23,7 @@ export default function Navbar({}: Props) {
       <Spacer />
       <Text>Contact</Text>
       <Spacer />
-      <Link href="/resume.pdf">
-        Resume
-    </Link>
+      <Link href="/resume.pdf">Resume</Link>
     </Flex>
   );
 }
