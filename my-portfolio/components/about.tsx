@@ -21,7 +21,6 @@ const TechStack = [
   "React",
   "Typescript",
   "Node.js",
-  "",
   "Android Studio",
   "Flutter",
   "Figma",
@@ -46,7 +45,9 @@ const TechStackList = () => {
 export const About = () => {
   return (
     <Box id="about">
+
       <Box mb={4}>
+
         <HStack align={"center"}>
           <Heading fontSize={"2xl"} color={"#2F6475"}>
             01.
@@ -55,11 +56,12 @@ export const About = () => {
             About Me
           </Heading>
         </HStack>
-
+        
         <hr />
       </Box>
 
       <Flex align={"center"} justify={"space-between"}>
+
         <VStack
           width={"60%"}
           color={"#2F6475"}
@@ -96,6 +98,7 @@ export const About = () => {
           src="/headshot.jpg"
           alt="Mahlangu nzunda"
         />
+
       </Flex>
     </Box>
   );
