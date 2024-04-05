@@ -1,16 +1,12 @@
 import {
   Box,
   VStack,
-  Avatar,
   Image,
   Flex,
-  Button,
   Heading,
   Stack,
   Text,
-  Link,
   HStack,
-  Center,
 } from "@chakra-ui/react";
 import { MdEmail, MdPhone } from "react-icons/md";
 
@@ -44,7 +40,7 @@ const TechStackList = () => {
 
 export const About = () => {
   return (
-    <Box id="about">
+    <Box id="about" mb={16}>
 
       <Box mb={4}>
 
@@ -56,7 +52,6 @@ export const About = () => {
             About Me
           </Heading>
         </HStack>
-        
         <hr />
       </Box>
 

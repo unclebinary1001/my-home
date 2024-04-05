@@ -3,6 +3,7 @@ import React from "react";
 import { Header } from "./header";
 import Navbar from "./navbar";
 import { About } from "./about";
+import { Projects } from "./projects";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -10,6 +11,7 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
             <Navbar />
             <Header />
             <About />
+            <Projects />
             {children}
         </Box>
     );

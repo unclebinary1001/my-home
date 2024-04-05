@@ -17,7 +17,9 @@ export default function Navbar({}: Props) {
         <Text>About</Text>
       </Link>
       <Spacer />
-      <Text>Projects</Text>
+      <Link href="#projects">
+        <Text>Projects</Text>
+      </Link>
       <Spacer />
       <Text>Media</Text>
       <Spacer />
