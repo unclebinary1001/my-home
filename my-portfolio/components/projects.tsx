@@ -11,6 +11,7 @@ import {
   CardFooter,
   Button,
   Card,
+  Spacer,
 } from "@chakra-ui/react";
 import { MdEmail, MdPhone } from "react-icons/md";
 
@@ -28,13 +29,14 @@ const TechStack = [
   "Chakra UI",
   "Material UI",
   "Mantine UI",
+  "Tailwind CSS",
 ];
 
 const TechStackList = () => {
   return (
     <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
       {TechStack.map((tech) => (
-        <Text color={"#2d3748"} fontWeight={"bold"} id={tech}>
+        <Text key={tech} color={"#2d3748"} fontWeight={"medium"}>
           {tech}
         </Text>
       ))}
@@ -50,7 +52,7 @@ export const Projects = () => {
           <Heading fontSize={"2xl"} color={"#2F6475"}>
             02.
           </Heading>
-          <Heading size="xl" color={"#2f374e"}>
+          <Heading size="lg" color={"#2f374e"}>
             Some Things I've Built
           </Heading>
         </HStack>
@@ -68,15 +70,20 @@ export const Projects = () => {
 
         <Stack>
           <CardBody>
-            <Heading size="lg">Heart of Love Foundation</Heading>
+            <Heading size="md">Heart of Love Foundation</Heading>
             <Text py="2">
               Created a fully functioning web app using React, Tailwind CSS, Cloudflare Workers, Firebase, and Typescript
             </Text>
+            <TechStackList/>
           </CardBody>
 
-          <CardFooter>
+          <CardFooter w={"50%"}>
             <Button variant="solid" colorScheme="blue">
-              Buy Latte
+              Link
+            </Button>
+            <Spacer />
+            <Button variant="solid" colorScheme="blue">
+              Link
             </Button>
           </CardFooter>
         </Stack>

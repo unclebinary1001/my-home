@@ -24,13 +24,14 @@ const TechStack = [
   "Chakra UI",
   "Material UI",
   "Mantine UI",
+  "Tailwind CSS",
 ];
 
 const TechStackList = () => {
   return (
     <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
       {TechStack.map((tech) => (
-        <Text color={"#2d3748"} fontWeight={"bold"} id={tech}>
+        <Text key={tech} color={"#2d3748"} fontWeight={"bold"}>
           {tech}
         </Text>
       ))}
