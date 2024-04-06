@@ -58,6 +58,7 @@ const ProjectList = () => {
     <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
       {projects.map((project) => (
         <Card
+          key={project.title}
           w={"100%"}
           direction={{ base: "column", sm: "row" }}
           overflow="hidden"
