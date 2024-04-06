@@ -56,14 +56,15 @@ export const About = () => {
         <hr />
       </Box>
 
-      <Flex align={"center"} justify={"space-between"}>
+      <Flex flexDirection={{base: "column", md:"row"}} align={{md:"center"}} justify={{base:"center",md:"space-between"}}>
 
         <VStack
-          width={"60%"}
+          width={{md:"60%"}}
           color={"#2F6475"}
           fontSize={"md"}
           spacing={5}
-          align={"justify"}
+          align={"center"}
+          mb={{base: "8", md: "0"}}
         >
           <Text>
             Hi, my name is Mahlangu Nzunda. I'm a Software Engineer and EdTech
@@ -90,9 +91,10 @@ export const About = () => {
 
         <Image
           borderRadius="20px"
-          boxSize="400px"
+          boxSize={{base:"300px", md:"400px"}}
           src="/headshot.jpg"
           alt="Mahlangu nzunda"
+          mx={{base:"auto", md:"0"}}
         />
 
       </Flex>
