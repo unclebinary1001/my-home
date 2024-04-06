@@ -1,44 +1,119 @@
 import {
   Box,
-  VStack,
+  Link,
   Image,
-  Flex,
   Heading,
   Stack,
   Text,
   HStack,
   CardBody,
   CardFooter,
-  Button,
   Card,
+  IconButton,
   Spacer,
 } from "@chakra-ui/react";
-import { MdEmail, MdPhone } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { MdLink } from "react-icons/md";
+import React from "react";
 
-const TechStack = [
-  "Java",
-  "Kotlin",
-  "Python",
-  "React",
-  "Typescript",
-  "Node.js",
-  "Android Studio",
-  "Flutter",
-  "Figma",
-  "Lunacy",
-  "Chakra UI",
-  "Material UI",
-  "Mantine UI",
-  "Tailwind CSS",
+interface ProjectProps {
+  title: string;
+  description: string;
+  imgUrl: string;
+  techstack: string[];
+  github: string;
+  live: string;
+}
+
+const projects: ProjectProps[] = [
+  {
+    title: "Heart of Love Foundation",
+    description:
+      "Created a fully functioning website following the client's template and design. The site is used to manage the foundation's activities and donations.",
+    imgUrl: "/hol_pic.jpg",
+    techstack: [
+      "React",
+      "Typescript",
+      "Node.js",
+      "Vite",
+      "Tailwind CSS",
+      "Cloudflare Workers",
+      "Firebase",
+    ],
+    github: "https://github.com/unclebinary1001/hol_web",
+    live: "https://heartoflovefoundation.com/",
+  },
+  {
+    title: "Project 2",
+    description: "Description of Project 2",
+    imgUrl: "/project2.jpg",
+    techstack: ["Tech 3", "Tech 4"],
+    github: "https://github.com/project2",
+    live: "https://project2.com",
+  },
 ];
 
-const TechStackList = () => {
+const ProjectList = () => {
   return (
     <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
-      {TechStack.map((tech) => (
-        <Text key={tech} color={"#2d3748"} fontWeight={"medium"}>
-          {tech}
-        </Text>
+      {projects.map((project) => (
+        <Card
+          w={"100%"}
+          direction={{ base: "column", sm: "row" }}
+          overflow="hidden"
+          variant="outline"
+          backgroundColor={"#f7f9fc"}
+        >
+          <Stack>
+            <CardBody>
+              <Heading size="md">{project.title}</Heading>
+              <Text py="2">{project.description}</Text>
+              <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
+                {project.techstack.map((tech) => (
+                  <Text key={tech} color={"#2d3748"} fontWeight={"medium"}>
+                    {tech}
+                  </Text>
+                ))}
+              </Stack>
+            </CardBody>
+
+            <CardFooter w={"50%"}>
+              <Stack direction="row" spacing={4}>
+                {project.github != "" && (
+                  <Link href={project.github}>
+                    <IconButton
+                      isRound={true}
+                      color={"#2F6475"}
+                      aria-label="Github link Heart of Love site"
+                      icon={<FaGithub />}
+                      fontSize={"25px"}
+                    />
+                  </Link>
+                )}
+                {project.live != "" && (
+                  <Link href={project.live}>
+                    <IconButton
+                      isRound={true}
+                      color={"#2F6475"}
+                      aria-label="Live Link Heart of Love site"
+                      icon={<MdLink />}
+                      fontSize={"25px"}
+                    />
+                  </Link>
+                )}
+              </Stack>
+            </CardFooter>
+          </Stack>
+
+          <Spacer />
+          <Image
+            objectFit="cover"
+            padding={{ base: 0, sm: 8 }}
+            maxW={{ base: "100%", sm: "400px" }}
+            src={project.imgUrl}
+            alt={project.title}
+          />
+        </Card>
       ))}
     </Stack>
   );
@@ -56,46 +131,10 @@ export const Projects = () => {
             Some Things I've Built
           </Heading>
         </HStack>
-
         <hr />
       </Box>
 
-      <Card
-        direction={{ base: "column", sm: "row" }}
-        overflow="hidden"
-        variant="outline"
-        backgroundColor={"#f7f9fc"}
-      >
-        
-
-        <Stack>
-          <CardBody>
-            <Heading size="md">Heart of Love Foundation</Heading>
-            <Text py="2">
-              Created a fully functioning web app using React, Tailwind CSS, Cloudflare Workers, Firebase, and Typescript
-            </Text>
-            <TechStackList/>
-          </CardBody>
-
-          <CardFooter w={"50%"}>
-            <Button variant="solid" colorScheme="blue">
-              Link
-            </Button>
-            <Spacer />
-            <Button variant="solid" colorScheme="blue">
-              Link
-            </Button>
-          </CardFooter>
-        </Stack>
-
-        <Image
-          objectFit="cover"
-          maxW={{ base: "100%", sm: "200px" }}
-          src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-          alt="Caffe Latte"
-        />
-      </Card>
-
+      <ProjectList />
     </Box>
   );
 };

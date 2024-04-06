@@ -18,7 +18,7 @@ export const Header = () => {
         a strong desire to learn and grow in the tech industry.
       </Text>
       <Stack direction="row" spacing={4}>
-        <Link href="mailto:nzundamahlangu@gmail.co9m">
+        <Link href="mailto:nzundamahlangu@gmail.com">
           <Button leftIcon={<MdEmail />} color={"#2F6475"} variant="outline">
             Email
           </Button>

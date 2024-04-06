@@ -8,7 +8,6 @@ import {
   Text,
   HStack,
 } from "@chakra-ui/react";
-import { MdEmail, MdPhone } from "react-icons/md";
 
 const TechStack = [
   "Java",
@@ -41,10 +40,8 @@ const TechStackList = () => {
 
 export const About = () => {
   return (
-    <Box id="about" mb={16}>
-
+    <Box as="div" id="about" mb={16}>
       <Box mb={4}>
-
         <HStack align={"center"}>
           <Heading fontSize={"2xl"} color={"#2F6475"}>
             01.
@@ -56,19 +53,28 @@ export const About = () => {
         <hr />
       </Box>
 
-      <Flex flexDirection={{base: "column", md:"row"}} align={{md:"center"}} justify={{base:"center",md:"space-between"}}>
-
+      <Flex
+        flexDirection={{ base: "column", md: "row" }}
+        align={{ md: "center" }}
+        justify={{ base: "center", md: "space-between" }}
+      >
         <VStack
-          width={{md:"60%"}}
+          as={"div"}
+          width={{ md: "60%" }}
           color={"#2F6475"}
           fontSize={"md"}
           spacing={5}
-          align={"center"}
-          mb={{base: "8", md: "0"}}
+          align={"start"}
+          mb={{ base: "8", md: "0" }}
         >
           <Text>
             Hi, my name is Mahlangu Nzunda. I'm a Software Engineer and EdTech
             enthusiast.
+          </Text>
+          <Text>
+            Through my college career career, I've had the opportunity to work
+            on a variety of projects, ranging from web development to mobile app
+            development.
           </Text>
           <Text>
             Through my college career career, I've had the opportunity to work
@@ -91,12 +97,11 @@ export const About = () => {
 
         <Image
           borderRadius="20px"
-          boxSize={{base:"300px", md:"400px"}}
+          boxSize={{ base: "300px", md: "400px" }}
           src="/headshot.jpg"
           alt="Mahlangu nzunda"
-          mx={{base:"auto", md:"0"}}
+          mx={{ base: "auto", md: "0" }}
         />
-
       </Flex>
     </Box>
   );
