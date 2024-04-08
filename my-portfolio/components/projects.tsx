@@ -58,6 +58,7 @@ const ProjectList = () => {
     <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
       {projects.map((project) => (
         <Card
+        _hover={{ boxShadow: 'xl', borderColor: '#2F6475', borderWidth: '3px', borderStyle: 'solid', borderRadius: 'xl'}}
           key={project.title}
           w={"100%"}
           direction={{ base: "column", sm: "row" }}
