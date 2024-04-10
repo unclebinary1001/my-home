@@ -11,7 +11,7 @@ export const Header = () => {
         Mahlangu Nzunda.
       </Heading>
       <Heading mb={8} color={"#2F6475"} size="3xl" lineHeight={1.2}>
-        Software Engineer 👨🏿‍💻| Builder
+        Software Engineer 👨🏿‍💻| Shipper
       </Heading>
       <Text mb={8} fontSize={"lg"} maxW={600} color={"#2f374e"} align={"left"}>
         Computer Engineering student with a passion for software development and
