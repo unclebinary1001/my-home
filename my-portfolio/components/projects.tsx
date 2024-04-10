@@ -55,16 +55,18 @@ const projects: ProjectProps[] = [
 
 const ProjectList = () => {
   return (
-    <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
+    <Stack direction="row" spacing={10} flexWrap={"wrap"} mt={3}>
       {projects.map((project) => (
         <Card
-        _hover={{ boxShadow: 'xl', borderColor: '#2F6475', borderWidth: '3px', borderStyle: 'solid', borderRadius: 'xl'}}
+        _hover={{ transitionDuration: '300ms',cursor: 'pointer', transform: 'scale(1.01)', boxShadow: 'xl', borderColor: '#2F6475', borderWidth: '1px', borderStyle: 'solid', borderRadius: 'xl'}}
           key={project.title}
           w={"100%"}
           direction={{ base: "column", sm: "row" }}
           overflow="hidden"
           variant="outline"
-          backgroundColor={"#f7f9fc"}
+          backgroundColor={"#e2e8f0"}
+          paddingX={8}
+          paddingY={4}
         >
           <Stack>
             <CardBody>

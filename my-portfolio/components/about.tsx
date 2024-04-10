@@ -61,7 +61,7 @@ export const About = () => {
         <VStack
           as={"div"}
           width={{ md: "60%" }}
-          color={"#2F6475"}
+          color={"#2f374e"}
           fontSize={"md"}
           spacing={5}
           align={"start"}
@@ -72,12 +72,7 @@ export const About = () => {
             enthusiast.
           </Text>
           <Text>
-            Through my college career career, I've had the opportunity to work
-            on a variety of projects, ranging from web development to mobile app
-            development.
-          </Text>
-          <Text>
-            Through my college career career, I've had the opportunity to work
+            Through out my college career career, I've had the opportunity to work
             on a variety of projects, ranging from web development to mobile app
             development.
           </Text>
