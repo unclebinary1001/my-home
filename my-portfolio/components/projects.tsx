@@ -60,7 +60,6 @@ const ProjectList = () => {
         <Card
         _hover={{ transitionDuration: '300ms',cursor: 'pointer', transform: 'scale(1.01)', boxShadow: 'xl', borderColor: '#2F6475', borderWidth: '1px', borderStyle: 'solid', borderRadius: 'xl'}}
           key={project.title}
-          w={"100%"}
           direction={{ base: "column", md: "row" }}
           overflow="hidden"
           variant="outline"
@@ -68,11 +67,11 @@ const ProjectList = () => {
           paddingX={8}
           paddingY={4}
         >
-          <Stack>
+          <Stack spacing={{base: 0, md: 4}}>
             <CardBody>
               <Heading size="md">{project.title}</Heading>
-              <Text py="2">{project.description}</Text>
-              <Stack direction="row" spacing={4} flexWrap={"wrap"} mt={3}>
+              <Text py={4}>{project.description}</Text>
+              <Stack direction="row" spacing={3} flexWrap={"wrap"}>
                 {project.techstack.map((tech) => (
                   <Text key={tech} color={"#2d3748"} fontWeight={"medium"}>
                     {tech}
@@ -81,7 +80,7 @@ const ProjectList = () => {
               </Stack>
             </CardBody>
 
-            <CardFooter w={"50%"}>
+            <CardFooter>
               <Stack direction="row" spacing={4}>
                 {project.github != "" && (
                   <Link href={project.github}>
@@ -108,12 +107,11 @@ const ProjectList = () => {
               </Stack>
             </CardFooter>
           </Stack>
-
-          <Spacer />
           <Image
             objectFit="scale-down"
             padding={{ base: 0, sm: 8 }}
-            maxW={{ base: "100%", sm: "300px", md: "400px" }}
+            marginX={{ base: "auto"}}
+            maxW={{ base: "100%", sm: '90%', md: "400px" }}
             src={project.imgUrl}
             alt={project.title}
           />
