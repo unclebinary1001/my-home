@@ -64,8 +64,8 @@ const ProjectList = () => {
           overflow="hidden"
           variant="outline"
           backgroundColor={"#e2e8f0"}
-          paddingX={8}
-          paddingY={4}
+          paddingX={{base:1, md:8}}
+          paddingY={{base:2, md:8}}
         >
           <Stack spacing={{base: 0, md: 4}}>
             <CardBody>
@@ -110,7 +110,8 @@ const ProjectList = () => {
           <Spacer />
           <Image
             objectFit="scale-down"
-            padding={{ base: 0, sm: 8 }}
+            paddingX={{base:4, md:8}}
+            paddingY={{ base: 0, sm: 8 }}
             marginX={{ base: "auto"}}
             maxW={{ base: "100%", sm: '90%', md: "400px" }}
             src={project.imgUrl}
