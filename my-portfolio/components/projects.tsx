@@ -46,7 +46,7 @@ const projects: ProjectProps[] = [
   {
     title: "Project 2",
     description: "Description of Project 2",
-    imgUrl: "/project2.jpg",
+    imgUrl: "/example.jpg",
     techstack: ["Tech 3", "Tech 4"],
     github: "https://github.com/project2",
     live: "https://project2.com",
@@ -107,6 +107,7 @@ const ProjectList = () => {
               </Stack>
             </CardFooter>
           </Stack>
+          <Spacer />
           <Image
             objectFit="scale-down"
             padding={{ base: 0, sm: 8 }}
