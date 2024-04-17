@@ -44,12 +44,12 @@ const projects: ProjectProps[] = [
     live: "https://heartoflovefoundation.com/",
   },
   {
-    title: "Project 2",
-    description: "Description of Project 2",
-    imgUrl: "/example.jpg",
-    techstack: ["Tech 3", "Tech 4"],
-    github: "https://github.com/project2",
-    live: "https://project2.com",
+    title: "TQ Calculator",
+    description: "Web app taiored for students enrolled in Mr. Turnquest's engineering economy class.",
+    imgUrl: "/tq_calc.jpg",
+    techstack: ["React", "Typescript", "Mantine UI", "Vite"],
+    github: "https://github.com/unclebinary1001/tqcalculator",
+    live: "https://tqcalculator.vercel.app",
   },
 ];
 
