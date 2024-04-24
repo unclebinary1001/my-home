@@ -56,8 +56,6 @@ function MobileNavMenu() {
             aria-label="Main navigation"
             spacing="0"
           >
-          
-
             <Link padding="3" fontFamily="heading" href="#about">
               <Text>About</Text>
             </Link>
@@ -66,7 +64,9 @@ function MobileNavMenu() {
             </Link>
             <Text padding="3">Media</Text>
             <Text padding="3">Contact</Text>
-            <Link padding="3" href="/resume.pdf">Resume</Link>
+            <Link padding="3" href="/resume.pdf">
+              Resume
+            </Link>
           </Stack>
         </DrawerContent>
       </Drawer>
