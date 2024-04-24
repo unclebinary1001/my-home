@@ -109,7 +109,7 @@ const ProjectList = () => {
           </Stack>
           <Spacer />
           <Image
-            objectFit="scale-down"
+            objectFit="cover"
             paddingX={{base:4, md:8}}
             paddingY={{ base: 0, sm: 8 }}
             marginX={{ base: "auto"}}
