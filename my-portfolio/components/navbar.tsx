@@ -51,22 +51,22 @@ function MobileNavMenu() {
         <DrawerOverlay />
         <DrawerContent id="nav-menu" bg="gray.300" padding="6">
           <Stack
-            divider={<StackDivider borderColor="whiteAlpha.300" />}
+            divider={<StackDivider borderColor="whiteAlpha.600" />}
             as="nav"
             aria-label="Main navigation"
             spacing="0"
           >
           
 
-            <Link fontFamily="heading" href="#about">
+            <Link padding="3" fontFamily="heading" href="#about">
               <Text>About</Text>
             </Link>
-            <Link href="#projects">
+            <Link padding="3" href="#projects">
               <Text>Projects</Text>
             </Link>
-            <Text>Media</Text>
-            <Text>Contact</Text>
-            <Link href="/resume.pdf">Resume</Link>
+            <Text padding="3">Media</Text>
+            <Text padding="3">Contact</Text>
+            <Link padding="3" href="/resume.pdf">Resume</Link>
           </Stack>
         </DrawerContent>
       </Drawer>
