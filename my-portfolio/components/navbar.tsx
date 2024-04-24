@@ -33,9 +33,11 @@ function MobileNavMenu() {
 
   const scrollToDiv = (divId: string) => {
     const div = document.getElementById(divId);
+    
     if (div) {
       div.scrollIntoView({ behavior: 'smooth' });
     }
+    menu.onClose();
   };
 
   return (
@@ -63,10 +65,10 @@ function MobileNavMenu() {
             aria-label="Main navigation"
             spacing="0"
           >
-            <Link padding="3" onClick={(event) => {event.preventDefault; scrollToDiv("about"); menu.onClose()}}>
+            <Link padding="3" onClick={() => scrollToDiv("about")}>
               <Text>About</Text>
             </Link>
-            <Link padding="3" href="#projects">
+            <Link padding="3" onClick={() => scrollToDiv("projects")}>
               <Text>Projects</Text>
             </Link>
             <Text padding="3">Media</Text>
