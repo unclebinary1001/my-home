@@ -21,6 +21,20 @@ import {
 import { CloseIcon, HamburgerMenuIcon } from "./nav-icons";
 import { useEffect } from "react";
 
+
+const scrollToDiv = (divId: string) => {
+  // const div = document.getElementById(divId);
+
+  const navbarHeight = document.querySelector('nav')?.clientHeight || 0;
+  const targetDivOffset = document.getElementById(divId)?.offsetTop || 0;
+
+  window.scrollTo({
+    top: targetDivOffset - navbarHeight,
+    behavior: 'smooth'
+  });
+
+};
+
 function MobileNavMenu() {
   const menu = useDisclosure();
   const breakpoint = useBreakpointValue({ base: true, md: false });
@@ -31,12 +45,9 @@ function MobileNavMenu() {
     }
   }, [breakpoint, menu]);
 
-  const scrollToDiv = (divId: string) => {
-    const div = document.getElementById(divId);
-    
-    if (div) {
-      div.scrollIntoView({ behavior: 'smooth' });
-    }
+  const mobileScrollToDiv = (divId: string) => {
+    scrollToDiv(divId);
+
     menu.onClose();
   };
 
@@ -65,10 +76,10 @@ function MobileNavMenu() {
             aria-label="Main navigation"
             spacing="0"
           >
-            <Link padding="3" onClick={() => scrollToDiv("about")}>
+            <Link padding="3" onClick={() => mobileScrollToDiv("about")}>
               <Text>About</Text>
             </Link>
-            <Link padding="3" onClick={() => scrollToDiv("projects")}>
+            <Link padding="3" onClick={() => mobileScrollToDiv("projects")}>
               <Text>Projects</Text>
             </Link>
             <Text padding="3">Media</Text>
@@ -84,9 +95,12 @@ function MobileNavMenu() {
 }
 
 export default function Navbar() {
+  
+
   return (
-    <Box>
-      <Flex as={"header"} alignItems={"center"} py={4} mb={16}>
+    <Box as={"nav"} id="navbar" >
+      <Flex alignItems={"center"} py={4} >
+        <a href="/" style={{textDecoration: 'none'}}>
         <WrapItem>
           <Avatar
             color={"#ffffff"}
@@ -94,12 +108,13 @@ export default function Navbar() {
             name="Mahlangu Nzunda"
           />
         </WrapItem>
+        </a>
         <Spacer />
-        <Link href="#about" display={{ base: "none", md: "block" }}>
+        <Link  onClick={() =>  scrollToDiv('about')} display={{ base: "none", md: "block" }}>
           <Text>About</Text>
         </Link>
         <Spacer />
-        <Link href="#projects" display={{ base: "none", md: "block" }}>
+        <Link onClick={() =>  scrollToDiv('projects')}  display={{ base: "none", md: "block" }}>
           <Text>Projects</Text>
         </Link>
         <Spacer />
