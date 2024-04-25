@@ -1,9 +1,9 @@
-import { Box, Button, Heading, Stack, Text, Link, Spacer } from "@chakra-ui/react";
+import { Box, Button, Heading, Stack, Text, Link, Flex, Center } from "@chakra-ui/react";
 import { MdEmail, MdPhone } from "react-icons/md";
 
 export const Header = () => {
   return (
-    <Box maxW={"32 rem"} mb={28}>
+    <Box maxW={"32 rem"} minH={'100vh'} paddingTop={'25vh'} paddingBottom={'30vh'}>
       <Text mb={8} color={"#2F6475"}>
         Hi, my name is
       </Text>
