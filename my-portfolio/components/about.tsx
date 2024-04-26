@@ -40,7 +40,7 @@ const TechStackList = () => {
 
 export const About = () => {
   return (
-    <Box as="div" id="about" mb={16}>
+    <Box as="div" id="about" mb={16} minH={'100vh'}>
       <Box mb={4}>
         <HStack align={"center"}>
           <Heading fontSize={"2xl"} color={"#2F6475"}>

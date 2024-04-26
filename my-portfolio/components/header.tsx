@@ -3,7 +3,7 @@ import { MdEmail, MdPhone } from "react-icons/md";
 
 export const Header = () => {
   return (
-    <Box maxW={"32 rem"} minH={'100vh'} paddingTop={'25vh'} paddingBottom={'30vh'}>
+    <Box maxW={"32 rem"} h={'100vh'} paddingTop={{base:'10vh', md:'20vh'}}>
       <Text mb={8} color={"#2F6475"}>
         Hi, my name is
       </Text>
