@@ -8,10 +8,10 @@ import { Projects } from "./projects";
 export const Container = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
-        <Box maxW="1200px" mx={"auto"} zIndex={1} position={"sticky"} top={0} px={16} bg={"inherit"}>
+        <Box maxW="1200px" mx={"auto"} zIndex={1} position={"sticky"} top={0} px={8} bg={"inherit"}>
         <Navbar />
         </Box>
-        <Box maxW="1200px" mx="auto" px={16}>
+        <Box maxW="1200px" mx="auto" px={8}>
             <Header />
             <About />
             <Projects />
