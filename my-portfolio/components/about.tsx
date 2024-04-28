@@ -79,7 +79,7 @@ export const About = () => {
           <Text>
             I am currently the Cofounder of the Giants Education Network where
             we publish revision material for high school students in Zambia. I
-            also give back to the community by volunteering at the Heart of
+            also give back as volunteer at the Heart of
             Love Foundation and maintaining their website.
           </Text>
           <Text>
