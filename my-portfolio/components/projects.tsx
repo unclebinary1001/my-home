@@ -114,6 +114,7 @@ const ProjectList = () => {
             paddingY={{ base: 0, sm: 8 }}
             marginX={{ base: "auto"}}
             maxW={{ base: "100%", sm: '90%', md: "400px" }}
+            h={{ base: "100%", sm: "300px"}}
             src={project.imgUrl}
             alt={project.title}
           />
