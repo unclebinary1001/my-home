@@ -4,6 +4,7 @@ import { Header } from "./header";
 import Navbar from "./navbar";
 import { About } from "./about";
 import { Projects } from "./projects";
+import { Footer } from "./footer";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -15,6 +16,7 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
             <Header />
             <About />
             <Projects />
+            <Footer />
             {children}
         </Box>
         </>

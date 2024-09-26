@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   HStack,
+  Spacer,
 } from "@chakra-ui/react";
 
 const TechStack = [
@@ -52,15 +53,15 @@ export const About = () => {
         </HStack>
         <hr />
       </Box>
-
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         align={{ md: "center" }}
         justify={{ base: "center", md: "space-between" }}
+        gap={{base: 8, sm: 8, md: 32}}
       >
         <VStack
           as={"div"}
-          width={{ md: "60%" }}
+          width={{ md: "70%" }}
           color={"#2f374e"}
           fontSize={"md"}
           spacing={5}
@@ -89,10 +90,9 @@ export const About = () => {
           </Text>
           <TechStackList />
         </VStack>
-
         <Image
-          borderRadius="20px"
-          boxSize={{ base: "300px", md: "400px" }}
+          // borderRadius="20px"
+          boxSize={{ base: "70%", md: "400px" }}
           src="/headshot.jpg"
           alt="Mahlangu nzunda"
           mx={{ base: "auto", md: "0" }}
