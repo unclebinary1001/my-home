@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <Box py={4}>
       <Text textAlign={"center"}>
-        © 2024 Mahlangu Nzunda
+        © 2024 - {new Date().getFullYear()} Mahlangu Nzunda
       </Text>
       <Text textAlign="center">
           Made with <span role="img" aria-label="love">❤️</span> and React
