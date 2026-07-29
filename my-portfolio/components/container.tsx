@@ -8,7 +8,7 @@ import { Footer } from "./footer";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Box bg="#ffffff" minH="100vh" overflowX="hidden" color="#000000">
+    <Box bg="#ffffff" minH="100vh" overflowX="clip" color="#000000">
       <Box
         position="sticky"
         top={0}
