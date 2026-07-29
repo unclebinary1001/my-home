@@ -7,18 +7,32 @@ import { Projects } from "./projects";
 import { Footer } from "./footer";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
-    return (
-        <>
-        <Box maxW="1200px" mx={"auto"} zIndex={1} position={"sticky"} top={0} px={8} bg={"inherit"}>
-        <Navbar />
+  return (
+    <Box bg="#ffffff" minH="100vh" overflowX="hidden" color="#000000">
+      <Box
+        position="sticky"
+        top={0}
+        zIndex={100}
+        bg="rgba(255, 255, 255, 0.9)"
+        backdropFilter="blur(8px)"
+        borderBottom="1px solid rgba(0,0,0,0.05)"
+      >
+        <Box maxW="1000px" mx="auto" px={4}>
+          <Navbar />
         </Box>
-        <Box maxW="1200px" mx="auto" px={8}>
-            <Header />
-            <About />
-            <Projects />
-            <Footer />
-            {children}
-        </Box>
-        </>
-    );
+      </Box>
+
+      <Box maxW="1000px" mx="auto" px={4} position="relative">
+        <Header />
+      </Box>
+
+      <About />
+
+      <Box maxW="1000px" mx="auto" px={4}>
+        <Projects />
+        <Footer />
+        {children}
+      </Box>
+    </Box>
+  );
 };
